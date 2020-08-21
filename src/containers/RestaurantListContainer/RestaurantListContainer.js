@@ -21,3 +21,6 @@ class RestaurantListContainer extends React.Component {
 }
 
 export default RestaurantListContainer;
+
+
+// Think of container like the div that holds everything. This Div is a class that has state and methods that it can pass to it's children so they can render a "view" and pass it back to the container

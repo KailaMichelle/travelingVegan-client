@@ -4,11 +4,11 @@ import RestaurantModel from '../../models/RestaurantModel';
 
 class RestaurantContainer extends React.Component {
     state = {
-        restaurant: [],
+        restaurant: {},
     };
 
     componentDidMount(){
-        RestaurantModel.getRestaurantById()
+        RestaurantModel.getRestaurantById(this.props.params.id)
             .then((result) => {
                 console.log(result)
                 this.setState({restaurant: result});

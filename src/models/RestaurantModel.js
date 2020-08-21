@@ -1,8 +1,8 @@
-const url = 'http://localhost:4000/restaurants'
+const url = `http://localhost:4000/restaurants`
 
 class RestaurantModel {
     static getAllRestaurants = () => {
-        return fetch(url)
+        return fetch('http://localhost:4000/restaurants')
             .then((response) => response.json())
     }
 
