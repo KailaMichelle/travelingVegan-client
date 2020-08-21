@@ -1,13 +1,20 @@
 import React from 'react';
 import './App.css';
+import NavBar from './components/NavBar.js/NavBar';
+import Routes from './config/routes';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        I work
-      </header>
-    </div>
+    <React.Fragment>
+      <NavBar />
+      <div className="App">
+        <header className="App-header">
+          <Routes />
+        </header>
+      </div>
+      <Footer />
+    </React.Fragment>
   );
 }
 
