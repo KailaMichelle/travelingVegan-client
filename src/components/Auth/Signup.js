@@ -20,7 +20,8 @@ class SignUp extends Component {
         axios.post(`${process.env.REACT_APP_API}/user/signup`, this.state)
             .then((res) => {
                 console.log(res);
-                this.props.history.push('/');
+                this.props.setCurrentUser(res.data.token);
+                this.props.history.push('/profile');
             })
             .catch((err) => {
                 console.log(err.response.status);

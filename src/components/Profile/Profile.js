@@ -1,11 +1,12 @@
 import React from 'react'
 
-function Profile(props){
-    const { user } = props;
-    console.log(user);
+function Profile(){
+    // const { user } = props;
+    // console.log(user);
     return (
         <div>
-            {user.username}
+            Profile
+            {/* {user.username} */}
         </div>
     )
 }
