@@ -7,17 +7,17 @@ import Login from '../components/Auth/Login';
 import Signup from '../components/Auth/Signup';
 import UserContainer from '../containers/UserContainer/UserContainer';
 import CurrentUserContainer from '../containers/CurrentUserContainer/CurrentUserContainer';
+import NewRestaurantContainer from '../containers/NewRestaurantContainer/NewRestaurantContainer';
 
 export default ({ currentUser, setCurrentUser }) => (
     <Switch>
         <Route exact path='/' component={Home} />
+        <Route path='/restaurants/new' component={NewRestaurantContainer} />
         <Route path='/restaurants' component={RestaurantListContainer} />
-
         {/* CURRENT USER PROFILE PATH */}
         {/* <Route path='/profile' component={CurrentUserContainer}/> */}
         <Route path='/profiles/:id' component={CurrentUserContainer} />
-
-
+        
         {/* ALL PROFILES*/}
         {/* <Route path='/profiles/:id' component={CurrentUserContainer} /> */}
         <Route path='/profiles' component={UserContainer} />

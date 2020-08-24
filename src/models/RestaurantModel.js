@@ -1,4 +1,5 @@
 const url = `http://localhost:4000/restaurants`
+const token = localStorage.getItem('token');
 
 class RestaurantModel {
     static getAllRestaurants = () => {
@@ -16,7 +17,7 @@ class RestaurantModel {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                // 'Authorization': token,
+                'Authorization': token,
             },
             body: JSON.stringify(restaurant)
         })
