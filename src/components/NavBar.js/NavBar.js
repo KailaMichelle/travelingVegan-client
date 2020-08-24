@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function NavBar() {
+function NavBar({ currentUser, logout }) {
+    const link = `profiles/${currentUser}`
     return (
         <nav>
             <div className="container">
@@ -18,12 +19,26 @@ function NavBar() {
                     <li>
                         <NavLink to='/restaurants'>Restaurants</NavLink>
                     </li>
+                    {!currentUser && (
+                    <React.Fragment>
                     <li>
                         <NavLink to='/login'>Login</NavLink>
                     </li>
                     <li>
                         <NavLink to='/signup'>Sign Up</NavLink>
                     </li>
+                    </React.Fragment>
+                    )}
+                    {currentUser && (
+                        <React.Fragment>
+                    <li>
+                        <NavLink to={link}>Profile</NavLink>
+                    </li>
+                    <li>
+                        <span onClick={logout}>Log Out</span>
+                    </li>
+                        </React.Fragment>
+                    )}
                 </ul>
             </div>
         </nav>

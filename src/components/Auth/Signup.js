@@ -21,7 +21,7 @@ class SignUp extends Component {
             .then((res) => {
                 console.log(res);
                 this.props.setCurrentUser(res.data.token);
-                this.props.history.push('/profile');
+                this.props.history.push('/');
             })
             .catch((err) => {
                 console.log(err.response.status);

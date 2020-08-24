@@ -1,12 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Profile(){
-    // const { user } = props;
-    // console.log(user);
+function Profile(props){
+    const { user, list } = props
     return (
         <div>
-            Profile
-            {/* {user.username} */}
+            <Link to={`/profiles/${user._id}`}>
+                <div>
+                {user.username}
+                </div>
+
+                {!list && (
+                    <>
+                    {user.username}
+                    </>
+                )}
+            </Link>
         </div>
     )
 }
