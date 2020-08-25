@@ -16,16 +16,32 @@ class RestaurantListContainer extends React.Component {
             })
             .catch((err) => console.log(err))
     }
-
-    // deleteRestaurant = (restaurant) => {
-    //     RestaurantModel.deleteRestaurant(restaurant).then((res) => {
-    //         console.log(restaurant)
-    //     })
-    //     .catch((err) => console.log(err))
+    
+    // componentDidUpdate(){
+    //     RestaurantModel.getAllRestaurants()
+    //         .then((result) => {
+    //             this.setState({restaurants: result});
+    //         })
+    //         .catch((err) => console.log(err))
     // }
 
+
+    // FILTER - if response 200 do this etc..
+    // Is this efficient
+    deleteRestaurant = (restaurant) => {
+        RestaurantModel.deleteRestaurant(restaurant).then((res) => {
+            // console.log('Deleted restaurant=', restaurant)
+            RestaurantModel.getAllRestaurants()
+            .then((result) => {
+                this.setState({restaurants: result})
+            })
+            .catch((err) => console.log(err))
+        })
+        .catch((err) => console.log(err))
+    }
+
     render(){
-        return <Restaurants restaurants={this.state.restaurants} currentUser={this.props.currentUser} />
+        return <Restaurants restaurants={this.state.restaurants} currentUser={this.props.currentUser} deleteRestaurant={this.deleteRestaurant}/>
     }
 }
 

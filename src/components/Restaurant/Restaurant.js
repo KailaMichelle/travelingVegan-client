@@ -55,9 +55,9 @@ class Restaurant extends Component{
     //     });
     //   }
 
-    // deleteClicked = (e) => {
-    //     this.props.deleteRestaurant(e.target.value)
-    // }
+    deleteClicked = (e) => {
+        this.props.deleteRestaurant(e.target.value)
+    }
 
     render(){
         return (
@@ -65,7 +65,7 @@ class Restaurant extends Component{
                 {this.props.restaurant.name}
                 {this.props.restaurant.location}
                 <img src={this.props.restaurant.image} alt=""/>
-                {/* <button onClick={this.deleteClicked}  value={this.props.restaurant._id}>Delete</button> */}
+                <button onClick={this.deleteClicked}  value={this.props.restaurant._id}>Delete</button>
                 {/* <FavoriteRestaurant restaurant={this.props.restaurant} currentUser={this.props.currentUser}/> */}
                 {/* <button onClick={this.handleClick} value={this.props.restaurant._id} name="favoriteRestaurants">Add to Favorites</button> */}
             </div>
