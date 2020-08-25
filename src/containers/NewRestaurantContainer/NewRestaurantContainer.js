@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import RestaurantModel from '../../models/RestaurantModel';
-import UserModel from '../../models/UserModel';
 
 class NewRestaurantContainer extends Component {
     state = {
@@ -9,17 +8,7 @@ class NewRestaurantContainer extends Component {
         location: '',
         fullyVegan: false,
         image: '',
-        user: '',
     };
-
-    // componentDidMount(){
-    //     UserModel.getUserById(this.props.match.params.id)
-    //         .then((result) => {
-    //             console.log(result);
-    //             this.setState({user: result});
-    //         })
-    //         .catch((err) => console.log(err))
-    // }
 
     handleChange = (e) => {
         if(e.target.value === 'on'){
@@ -58,11 +47,8 @@ class NewRestaurantContainer extends Component {
                         <label htmlFor="">Fully Vegan?</label>
                         <input type="checkbox" name="fullyVegan" onInput={this.handleChange}/>
                     </div>
-                    <select name="user" id="user">
-                        <option value></option>
-                    </select>
                     <div>
-                        <button onSubmit="submit">Submit</button>
+                        <button type="submit">Submit</button>
                     </div>
                 </form>
             </div>

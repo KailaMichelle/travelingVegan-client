@@ -1,10 +1,12 @@
 import React from 'react';
 import Restaurants from '../../components/Restaurants/Restaurants';
 import RestaurantModel from '../../models/RestaurantModel';
+import Restaurant from '../../components/Restaurant/Restaurant';
 
 class RestaurantListContainer extends React.Component {
     state = {
         restaurants: [],
+        // user: this.props.currentUser,
     };
 
     componentDidMount(){
@@ -15,8 +17,15 @@ class RestaurantListContainer extends React.Component {
             .catch((err) => console.log(err))
     }
 
+    // deleteRestaurant = (restaurant) => {
+    //     RestaurantModel.deleteRestaurant(restaurant).then((res) => {
+    //         console.log(restaurant)
+    //     })
+    //     .catch((err) => console.log(err))
+    // }
+
     render(){
-        return <Restaurants restaurants={this.state.restaurants} />
+        return <Restaurants restaurants={this.state.restaurants} currentUser={this.props.currentUser} />
     }
 }
 

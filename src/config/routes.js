@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Home from '../components/Home/Home';
 import RestaurantListContainer from '../containers/RestaurantListContainer/RestaurantListContainer';
@@ -12,8 +12,10 @@ import NewRestaurantContainer from '../containers/NewRestaurantContainer/NewRest
 export default ({ currentUser, setCurrentUser }) => (
     <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/restaurants/new' component={NewRestaurantContainer} />
-        <Route path='/restaurants' component={RestaurantListContainer} />
+        {/* <Route path='/restaurants/new' component={NewRestaurantContainer} /> */}
+
+        <Route path='/restaurants/new' render={() => <NewRestaurantContainer currentUser={currentUser}/> } />
+        <Route path='/restaurants' render={() => <RestaurantListContainer currentUser={currentUser} />}/>
         {/* CURRENT USER PROFILE PATH */}
         {/* <Route path='/profile' component={CurrentUserContainer}/> */}
         <Route path='/profiles/:id' component={CurrentUserContainer} />

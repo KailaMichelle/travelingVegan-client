@@ -23,6 +23,19 @@ class RestaurantModel {
         })
             .then((response) => response.json())
     }
+
+
+    // / static deleteRestaurant = (restaurantId) => {
+        //     return fetch(`${url}/${restaurantId}`, {
+        //         method: 'DELETE',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'Authorization': token,
+        //         },
+        //     })
+        //     .then((response) => response.json())
+        // } 
+    // }
 }
 
 export default RestaurantModel;
