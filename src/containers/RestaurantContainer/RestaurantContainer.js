@@ -8,17 +8,17 @@ class RestaurantContainer extends React.Component {
     };
 
     componentDidMount(){
-        RestaurantModel.getRestaurantById(this.props.params.id)
+        RestaurantModel.getRestaurantById(this.props.match.params.id)
             .then((result) => {
-                console.log(result)
+                // console.log(result)
                 this.setState({restaurant: result});
             })
             .catch((err) => console.log(err))
     }
 
     render(){
-        console.log(this.props)
-        return <Restaurant restaurant={this.state.restaurant} />
+        // console.log(this.props)
+        return <Restaurant restaurant={this.state.restaurant} list={false}/>
     }
 }
 

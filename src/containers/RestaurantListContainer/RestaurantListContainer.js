@@ -6,7 +6,6 @@ import Restaurant from '../../components/Restaurant/Restaurant';
 class RestaurantListContainer extends React.Component {
     state = {
         restaurants: [],
-        // user: this.props.currentUser,
     };
 
     componentDidMount(){
@@ -16,18 +15,20 @@ class RestaurantListContainer extends React.Component {
             })
             .catch((err) => console.log(err))
     }
-    
-    // componentDidUpdate(){
-    //     RestaurantModel.getAllRestaurants()
-    //         .then((result) => {
-    //             this.setState({restaurants: result});
-    //         })
-    //         .catch((err) => console.log(err))
-    // }
 
+    updateRestaurant = (restaurant) => {
+        RestaurantModel.updateRestaurant(restaurant).then((res) => {
+            console.log('updated restaurant', restaurant)
+            RestaurantModel.getAllRestaurants()
+            .then((result) => {
+                this.setState({restaurants: result})
+            })
+            .catch((err) => console.log(err))
+        })
+        .catch((err) => console.log(err))
+    }
 
     // FILTER - if response 200 do this etc..
-    // Is this efficient
     deleteRestaurant = (restaurant) => {
         RestaurantModel.deleteRestaurant(restaurant).then((res) => {
             // console.log('Deleted restaurant=', restaurant)
@@ -41,7 +42,11 @@ class RestaurantListContainer extends React.Component {
     }
 
     render(){
-        return <Restaurants restaurants={this.state.restaurants} currentUser={this.props.currentUser} deleteRestaurant={this.deleteRestaurant}/>
+        return <Restaurants 
+        restaurants={this.state.restaurants} 
+        currentUser={this.props.currentUser} 
+        deleteRestaurant={this.deleteRestaurant} 
+        updateRestaurant={this.updateRestaurant}/>
     }
 }
 

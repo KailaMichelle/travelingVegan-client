@@ -8,14 +8,22 @@ import Signup from '../components/Auth/Signup';
 import UserContainer from '../containers/UserContainer/UserContainer';
 import CurrentUserContainer from '../containers/CurrentUserContainer/CurrentUserContainer';
 import NewRestaurantContainer from '../containers/NewRestaurantContainer/NewRestaurantContainer';
+import RestaurantContainer from '../containers/RestaurantContainer/RestaurantContainer';
+import EditRestaurantContainer from '../containers/EditRestaurantContainer/EditRestaurantContainer';
 
 export default ({ currentUser, setCurrentUser }) => (
     <Switch>
         <Route exact path='/' component={Home} />
         {/* <Route path='/restaurants/new' component={NewRestaurantContainer} /> */}
+        <Route exact path='/restaurants/new' render={() => <NewRestaurantContainer currentUser={currentUser}/> } />
 
-        <Route path='/restaurants/new' render={() => <NewRestaurantContainer currentUser={currentUser}/> } />
-        <Route path='/restaurants' render={() => <RestaurantListContainer currentUser={currentUser} />}/>
+
+        <Route path='/restaurants/:id/edit' component={EditRestaurantContainer} />
+        <Route path='/restaurants/:id' component={RestaurantContainer} />
+        <Route exact path='/restaurants' render={() => <RestaurantListContainer currentUser={currentUser} />}/>
+
+
+        {/* <Route path='/restaurants/:id/edit' component={ShowRestaurant} /> */}
         {/* CURRENT USER PROFILE PATH */}
         {/* <Route path='/profile' component={CurrentUserContainer}/> */}
         <Route path='/profiles/:id' component={CurrentUserContainer} />

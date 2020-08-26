@@ -24,7 +24,20 @@ class RestaurantModel {
             .then((response) => response.json())
     }
 
-    
+    static updateRestaurant = (restaurant, id) => {
+        const token = localStorage.getItem('token');
+        return fetch(`${url}/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': token,
+            },
+            body: JSON.stringify(restaurant)
+        })
+            .then((response) => response.json())
+    }
+
+
     static deleteRestaurant = (restaurantId) => {
         const token = localStorage.getItem('token');
         return fetch(`${url}/${restaurantId}`, {
@@ -36,6 +49,7 @@ class RestaurantModel {
             })
             .then((response) => response.json())
         } 
+
 }
 
 export default RestaurantModel;

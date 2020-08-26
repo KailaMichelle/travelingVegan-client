@@ -1,13 +1,25 @@
 import React, { Component } from 'react';
+import { Redirect, Link } from 'react-router-dom';
 import RestaurantModel from '../../models/RestaurantModel';
 import UserModel from '../../models/UserModel';
 import FavoriteRestaurant from './FavoriteRestaurant';
+import EditForm from './EditRestaurant';
+import EditRestaurant from './EditRestaurant';
 
 class Restaurant extends Component{
     // state = {
-    //     user: this.props.currentUser,
+    //     formStyle: {
+    //         display: 'none',
+    //     },
+    //     // user: this.props.currentUser,
     //     // restaurants: [],
     // };
+
+    // toggleBodyForm = () => {
+    //     this.state.formStyle.display === 'block'
+    //     ? this.setState({ formStyle: {display:'none'}})
+    //     : this.setState({ formStyle: {display:'block'}})
+    // }
 
     // componentDidMount(){
     //     UserModel.getUserById(this.props.currentUser._id)
@@ -60,14 +72,32 @@ class Restaurant extends Component{
     }
 
     render(){
+       const { restaurant, lists } = this.props
         return (
             <div>
-                {this.props.restaurant.name}
-                {this.props.restaurant.location}
-                <img src={this.props.restaurant.image} alt=""/>
-                <button onClick={this.deleteClicked}  value={this.props.restaurant._id}>Delete</button>
+                <Link to={`/restaurants/${restaurant._id}`}>
+                {restaurant.name}
+            </Link>
+                {restaurant.location}
+                <img src={restaurant.image} alt=""/>
+                <button onClick={this.deleteClicked}  value={restaurant._id}>Delete</button>
                 {/* <FavoriteRestaurant restaurant={this.props.restaurant} currentUser={this.props.currentUser}/> */}
                 {/* <button onClick={this.handleClick} value={this.props.restaurant._id} name="favoriteRestaurants">Add to Favorites</button> */}
+            {/* <Redirect to={`restaurants/${this.props.restaurant._id}`}> */}
+{/*             
+            {!this.props.list && (
+                <>
+            <button onClick={this.toggleBodyForm} value={this.props.restaurant}>
+                Edit
+            </button>
+                </>
+            )} */}
+            {/* </Redirect> */}
+            <Link to={`/restaurants/${restaurant._id}/edit`}>Edit</Link>
+            {/* <EditForm restaurant={this.props.restaurant} style={this.state.formStyle} autoFocus={true} 
+            buttonName="update restaurant"
+            updateRestaurant={this.props.updateRestaurant}
+            toggleBodyForm={this.toggleBodyForm}/> */}
             </div>
         )
     }
