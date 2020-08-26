@@ -32,7 +32,7 @@ class Restaurant extends Component{
     likeClicked = (e) => {
         console.log(this.state)
         console.log('like clicked')
-        this.setState({favoriteRestaurants: e.target.value}, () => {
+        this.setState({favoriteRestaurants: this.props.restaurant}, () => {
             console.log(this.state)
             // FavoriteModel.createFavorite(this.state)
             UserModel.updateFavorite(this.state, this.props.currentUser)

@@ -2,7 +2,6 @@ import React from 'react';
 import UserModel from '../../models/UserModel';
 // import RestaurantModel from '../../models/RestaurantModel';
 import CurrentUser from '../../components/CurrentUser/CurrentUser';
-import RestaurantModel from '../../models/RestaurantModel';
 
 class CurrentUserContainer extends React.Component {
     state = {
@@ -28,11 +27,8 @@ class CurrentUserContainer extends React.Component {
     }
 
     getFavorites(){
-        // RestaurantModel.getRestaurantById(this.state.user.favoriteRestaurants).then((res => {
-        //     console.log(res);
-        // })) 
         this.setState({favoriteRestaurants: this.state.user.favoriteRestaurants})
-        console.log(this.state.user.favoriteRestaurants)
+        // console.log(this.state.user.favoriteRestaurants)
     }
 
     // handleChange = (e) => {

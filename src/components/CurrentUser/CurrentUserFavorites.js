@@ -1,18 +1,17 @@
 import React from 'react';
 
 function CurrentUserFavorites(props){
-    const { favoriteList } = props
-
-    
+    const { favoriteList } = props;
+    // console.log(props.favoriteList.name)
 
     return (
         <div>
-            {favoriteList}
-            {/* {restaurant.location}
-            <img src={restaurant.image} alt=""/> */}
-
+            
+            {favoriteList.name}
+            {favoriteList.location}
+            <img src={favoriteList.image} alt=""/>
         </div>
-    )
+        )
 }
 
 export default CurrentUserFavorites;
