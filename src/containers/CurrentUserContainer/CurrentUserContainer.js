@@ -2,11 +2,13 @@ import React from 'react';
 import UserModel from '../../models/UserModel';
 // import RestaurantModel from '../../models/RestaurantModel';
 import CurrentUser from '../../components/CurrentUser/CurrentUser';
+import RestaurantModel from '../../models/RestaurantModel';
 
 class CurrentUserContainer extends React.Component {
     state = {
         user: {},
         restaurants: [],
+        favoriteRestaurants: [],
     };
 
     componentDidMount(){
@@ -21,8 +23,37 @@ class CurrentUserContainer extends React.Component {
 
     getRestaurants(){
         this.setState({restaurants: this.state.user.restaurants})
+        this.getFavorites();
         // console.log(this.state.user.restaurants)
     }
+
+    getFavorites(){
+        // RestaurantModel.getRestaurantById(this.state.user.favoriteRestaurants).then((res => {
+        //     console.log(res);
+        // })) 
+        this.setState({favoriteRestaurants: this.state.user.favoriteRestaurants})
+        console.log(this.state.user.favoriteRestaurants)
+    }
+
+    // handleChange = (e) => {
+    //     // if(e.target.value === 'on'){
+    //     //     e.target.value = true;
+    //     // }
+    //     this.setState({favoriteRestaurants: e.target.value})
+    // };
+
+    // handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     UserModel.updateUser(this.state.favoriteRestaurants)
+    //         .then((result) => {
+    //             console.log(result);
+    //         });
+    //     this.props.history.push('/');
+    // }
+
+    // likeRestaurant = (restaurant) => {
+        
+    // }
 
     // getRestaurants(){
     //     console.log(this.state.user.restaurants)
@@ -39,7 +70,7 @@ class CurrentUserContainer extends React.Component {
 
     render(){
         // console.log(restaurantObj)
-        return <CurrentUser user={this.state.user} restaurants={this.state.restaurants}/>
+        return <CurrentUser user={this.state.user} restaurants={this.state.restaurants} favoriteRestaurants={this.state.favoriteRestaurants}/>
     }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import CurrentUserRestaurants from './CurrentUserRestaurants';
+import CurrentUserFavorites from './CurrentUserFavorites';
 
 function CurrentUser(props){
     // console.log(props.restaurants);
@@ -8,6 +9,10 @@ function CurrentUser(props){
         // console.log(restaurantObj)
         return <CurrentUserRestaurants key={restaurantObj._id} restaurant={restaurantObj}/>
     });
+
+    const favoriteList = props.favoriteRestaurants.map((favoriteObj) => {
+        return <CurrentUserFavorites key={favoriteObj._id} favoriteList={favoriteObj}/>
+    })
     
     // let name = '';
     // Object.keys(props.restaurants).map(function(key) {
@@ -30,6 +35,7 @@ function CurrentUser(props){
            {/* {props.user.restaurants} */}
            {/* {name} */}
            {restaurantList}
+           {favoriteList}
        </div>
     )
 }
