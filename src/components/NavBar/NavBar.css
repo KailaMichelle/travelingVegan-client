@@ -1,0 +1,17 @@
+.navbar {
+    background: grey !important;
+    opacity: .70 !important;
+}
+
+/* LOGO */
+.logo {
+    color: white;
+    text-decoration: none;
+    flex-grow: 1;
+    font-size: 1.5rem;
+}
+
+.navbar-items {
+    color: white !important;
+    font-size: 1.4rem !important;
+}

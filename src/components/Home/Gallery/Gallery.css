@@ -1,0 +1,10 @@
+/* .gallery-container {
+    min-height: 70vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.tile-bar {
+    background: red !important;
+}

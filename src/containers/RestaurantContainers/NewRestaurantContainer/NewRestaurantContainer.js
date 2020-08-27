@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import RestaurantModel from '../../models/RestaurantModel';
+import RestaurantModel from '../../../models/RestaurantModel';
 
 class NewRestaurantContainer extends Component {
     state = {

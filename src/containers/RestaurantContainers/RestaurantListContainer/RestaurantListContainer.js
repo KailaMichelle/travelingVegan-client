@@ -1,7 +1,7 @@
 import React from 'react';
-import Restaurants from '../../components/Restaurants/Restaurants';
-import RestaurantModel from '../../models/RestaurantModel';
-import Restaurant from '../../components/Restaurant/Restaurant';
+import Restaurants from '../../../components/Restaurant/Restaurants';
+import RestaurantModel from '../../../models/RestaurantModel';
+import Restaurant from '../../../components/Restaurant/Restaurant';
 
 class RestaurantListContainer extends React.Component {
     state = {

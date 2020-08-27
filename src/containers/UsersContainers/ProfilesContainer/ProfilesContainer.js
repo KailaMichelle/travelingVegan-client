@@ -1,6 +1,6 @@
 import React from 'react';
-import Profiles from '../../components/Profiles/Profiles'
-import UserModel from '../../models/UserModel';
+import Profiles from '../../../components/Profiles/Profiles'
+import UserModel from '../../../models/UserModel';
 
 class UserContainer extends React.Component {
     state = {

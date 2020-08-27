@@ -1,6 +1,6 @@
 import React from 'react';
-import Restaurant from '../../components/Restaurant/Restaurant';
-import RestaurantModel from '../../models/RestaurantModel';
+import Restaurant from '../../../components/Restaurant/Restaurant';
+import RestaurantModel from '../../../models/RestaurantModel';
 
 class RestaurantContainer extends React.Component {
     state = {

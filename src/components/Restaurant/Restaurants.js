@@ -1,8 +1,8 @@
 import React from 'react';
-import Restaurant from '../Restaurant/Restaurant';
+import Restaurant from './Restaurant';
 
 function Restaurants(props){
-    // console.log(props.updateRestaurant)
+
     const restaurantList = props.restaurants.map((restaurantObj) => {
         return <Restaurant 
         key={restaurantObj._id} 

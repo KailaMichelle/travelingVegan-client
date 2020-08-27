@@ -1,5 +1,34 @@
-* {
-  margin: 20px;
-  box-sizing: border-box;
-  background-color: lightgray;
+.App {
+  min-height: 80vh;
 }
+
+body {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.text-content {
+  line-height: 1.5;
+}
+
+.container {
+  min-height: 70vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+

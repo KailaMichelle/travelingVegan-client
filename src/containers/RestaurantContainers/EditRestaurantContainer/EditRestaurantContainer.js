@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RestaurantModel from '../../models/RestaurantModel';
+import RestaurantModel from '../../../models/RestaurantModel';
 
 class EditRestaurantContainer extends Component {
     state = {

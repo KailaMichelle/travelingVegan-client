@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from '../Profile/Profile';
+import Profile from './Profile/Profile';
 
 function Profiles(props){
     const profileList = props.users.map((userObj) => {
