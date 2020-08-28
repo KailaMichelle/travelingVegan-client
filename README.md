@@ -99,14 +99,15 @@ To install fork and clone both repos and run npm i to install dependencies.
 ---
 
 ## Shoutouts
+On this project specifically: 
+- Ally Pittman 
+- Zach Milan
+- Nathan Harris
+- Michael Petty 
+- Melisa Larson
+- Leah Davis
 
-Ally Pittman
-Zach Milan
-Nathan Harris
-Michael Petty 
-Melisa Larson
-Leah Davis
+Honestly the list goes on..Thank you for all of the emotional and technical support!
 
-Honestly the list goes on..Thank you to the GA SEI-12 cohort. 
-Thank you for all of the emotional and technical support!
+In general I want to say Thank you to the GA SEI-12 cohort. 
 I will miss seeing you all everyday and look forward to further collaborations. 
