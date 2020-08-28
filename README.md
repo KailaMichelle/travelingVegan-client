@@ -8,17 +8,17 @@
 
 **A user should be able to:**
 
-- Navigate to "/" that includes name of the website and links to access restaurants. 
+    - Navigate to "/" that includes name of the website and links to access restaurants. 
 
-- Ability to Sign up or Log In.
+    - Ability to Sign up or Log In.
 
-- Access their profile once logged in.
+    - Access their profile once logged in.
 
-- Save Resources to profile.
+    - Save Resources to profile.
 
-- Be able to update saved resources and their personal titles. (think pinterest like style)
+    - Be able to update saved resources and their personal titles. (think pinterest like style)
 
-- Remove(delete) restaurants from their "board"
+    - Remove(delete) restaurants from their "board"
 
 ---
 
@@ -26,11 +26,11 @@
 
 **A user should be able to:**
 
-- Submit their own restaurant recommendations
+    - Submit their own restaurant recommendations
 
-- Full CRUD on their submitted resources
+    - Full CRUD on their submitted resources
 
-- Edit their own profile 
+    - Edit their own profile 
 
 ---
 
@@ -38,36 +38,36 @@
 
 **A user should be able to:**
 
-- A user can only submit valid data accoring to restaurant model. 
-    - Name, Location, Description, Fav-Menu Item
+    - A user can only submit valid data accoring to restaurant model. 
+        - Name, Location, Description, Fav-Menu Item
 
-- A user can only sign up with valid data according to user model 
-    - No repeat usernames or emails 
-    - Password requirements of length and special characters
+    - A user can only sign up with valid data according to user model 
+        - No repeat usernames or emails 
+        - Password requirements of length and special characters
 
-- User must be signed in to create a resource 
+    - User must be signed in to create a resource 
 
-- Only can update or delete their own resources
+    - Only can update or delete their own resources
 
-- Error messages added to all validations 
+    - Error messages added to all validations 
 
 ---
 
 **Bonuses**
 A user should be able to:
 
-- Upload a photo to their profile
-- Upload photos for their added resources
-- Delete profile
-- "like" restaurants 
-- Leave comments on posts
-- Organize saved resources in categories
+    - Upload a photo to their profile
+    - Upload photos for their added resources
+    - Delete profile
+    - "like" restaurants 
+    - Leave comments on posts
+    - Organize saved resources in categories
 
-Functionality bonuses:
-- Sign Up "Welcome email"
-- Organize restaurants by location
-- Search Feature 
-- Add ability to see public profiles
+    Functionality bonuses:
+    - Sign Up "Welcome email"
+    - Organize restaurants by location
+    - Search Feature 
+    - Add ability to see public profiles
 
 ---
 
@@ -88,7 +88,7 @@ To install fork and clone both repos and run npm i to install dependencies.
 ---
 ## ERD
 
-<img src="images/ERD.jpeg">
+![picture](src/images/ERD.jpeg)
 
 ---
 
