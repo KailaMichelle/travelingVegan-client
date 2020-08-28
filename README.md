@@ -88,11 +88,6 @@ Material UI
 To install fork and clone both repos and run npm i to install dependencies. 
 
 ---
-## ERD
-
-<img src="./ERD.jpeg">
-
----
 
 ## Wireframe
 
