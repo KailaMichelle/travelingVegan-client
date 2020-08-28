@@ -2,6 +2,7 @@ import React from 'react';
 import Restaurant from './Restaurant';
 import { Container } from '@material-ui/core';
 
+
 function Restaurants(props){
 
     const restaurantList = props.restaurants.map((restaurantObj) => {
@@ -17,10 +18,9 @@ function Restaurants(props){
         <div className="container">
             <Container fixed>
                 <div>
-                    <h2>Los Angeles</h2>
-                    <h4>Check out our favorite spots!</h4>
+                    <h4 className="highlight checkout">Check out our favorite spots!</h4>
                 </div>
-                <div>
+                <div className="restaurants">
                     {restaurantList}
                 </div>
             </Container>

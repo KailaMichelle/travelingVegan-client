@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import { Container, Button } from '@material-ui/core';
+
+import './Auth.css'
 
 class Login extends Component {
     state = {
@@ -31,22 +34,31 @@ class Login extends Component {
             });
         }
 
-        render(){
-            return(
-                <form onSubmit={this.handleSubmit}>
-                    {this.state.error}
-                    <div>
-                        <label htmlFor="email">Email</label>
-                        <input onChange={this.handleChange} type="email" id="email" name="email" value={this.state.email} />
-                    </div>
-                    <div>
-                    <label htmlFor="password">password</label>
-                        <input onChange={this.handleChange} type="password" id="password" name="password" value={this.state.password} />
-                    </div>
-                    <button type="submit">Login</button>
-                </form>
-            )
-        }
+    render(){
+        return(
+            <div className="login-container">
+                <Container fixed>
+                <div className="container-content">
+                    <h3 className="login">Login</h3>
+                    <form onSubmit={this.handleSubmit}>
+                        <label htmlFor="email" className="labels">Email</label>
+                        <div className="login-div">
+                            <input onChange={this.handleChange} type="email" id="email" name="email" value={this.state.email}/>
+                        </div>
+                        <label htmlFor="password" className="labels">Password</label>
+                        <div className="login-div">
+                            <input onChange={this.handleChange} type="password" id="password" name="password" value={this.state.password} />
+                        </div>
+                        <p className="error">{this.state.error}</p>
+                        <div class="submit-btn">
+                            <Button type="submit">Login</Button>
+                        </div>
+                    </form>
+                </div>
+                </Container>
+            </div>
+        )
+    }
 }
 
 export default withRouter(Login);

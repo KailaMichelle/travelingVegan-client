@@ -121,7 +121,7 @@ function NavBar({ currentUser, logout }) {
                 <ListItemText>About</ListItemText>
             </ListItem>
             <ListItem button>
-                <ListItemText><a href="mailto:kaila22@hotmail.com" className="contact">Contact</a></ListItemText>
+                <ListItemText><a href="mailto:kaila22@hotmail.com" className="contact-nav">Contact</a></ListItemText>
             </ListItem>
             <ListItem button component={NavLink} to="/restaurants" color="inherit">
                 <ListItemText>Restaurants</ListItemText>

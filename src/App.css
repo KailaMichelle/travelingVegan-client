@@ -67,3 +67,17 @@ p {
   color: var(--mustard);
 }
 
+.labels-2 {
+  margin-left: 10px;
+}
+
+.reccomendation-container {
+    min-height: 70vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px!important;
+}
+
+
+

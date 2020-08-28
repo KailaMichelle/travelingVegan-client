@@ -19,12 +19,12 @@ export default ({ currentUser, setCurrentUser }) => (
         {/* RESTAURANT ROUTES */}
         <Route exact path='/restaurants/new' render={() => <NewRestaurantContainer currentUser={currentUser}/> } />
         <Route path='/restaurants/:id/edit' component={EditRestaurantContainer} />
-        <Route path='/restaurants/:id' component={RestaurantContainer} />
+        <Route path='/restaurants/:id' component={RestaurantContainer}/>
         <Route exact path='/restaurants' render={() => <RestaurantListContainer currentUser={currentUser} />}/>
 
         {/* USER ROUTES */}
         <Route path='/profiles/:id' component={CurrentUserContainer} />
-        {/* <Route path='/profiles' component={UserContainer} /> */}
+        <Route path='/profiles' component={UserContainer} />
 
         {/* AUTH */}
         <Route path='/login' render={() => <Login setCurrentUser={setCurrentUser}/> } />

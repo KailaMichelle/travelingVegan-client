@@ -75,5 +75,25 @@ Functionality bonuses:
 
 ## Technologies 
 
-MERN Stack
+MERN Stack - MongoDB / Express / React / Node
+JavaScript
+CSS
+HTML
+Material UI
 
+--- 
+
+## Installation Instructions
+
+To install fork and clone both repos and run npm i to install dependencies. 
+
+---
+## ERD
+
+<img src="./images/ERD.jpeg">
+
+---
+
+## Wireframe
+
+[link to Wireframe!](https://xd.adobe.com/view/f2720b67-1a09-4f80-9857-fb73202b8620-a721/)

@@ -17,6 +17,7 @@ class RestaurantListContainer extends React.Component {
     }
 
     deleteRestaurant = (restaurant) => {
+        console.log('in delete')
         RestaurantModel.deleteRestaurant(restaurant).then((res) => {
             RestaurantModel.getAllRestaurants()
             .then((result) => {
