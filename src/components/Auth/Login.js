@@ -6,6 +6,7 @@ class Login extends Component {
     state = {
         email:'',
         password:'',
+        error: '',
     };
 
     handleChange = (e) => {
@@ -26,12 +27,14 @@ class Login extends Component {
                 console.log(err.response.status);
                 console.log(err.response.data);
                 console.log(err.response.data.message);
+                this.setState({error: err.response.data.message});
             });
         }
 
         render(){
             return(
                 <form onSubmit={this.handleSubmit}>
+                    {this.state.error}
                     <div>
                         <label htmlFor="email">Email</label>
                         <input onChange={this.handleChange} type="email" id="email" name="email" value={this.state.email} />

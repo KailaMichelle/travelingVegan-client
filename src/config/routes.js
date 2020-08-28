@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import RestaurantListContainer from '../containers/RestaurantContainers/RestaurantListContainer/RestaurantListContainer';
 import Login from '../components/Auth/Login';
 import Signup from '../components/Auth/Signup';

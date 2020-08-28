@@ -16,17 +16,17 @@ class RestaurantListContainer extends React.Component {
             .catch((err) => console.log(err))
     }
 
-    updateRestaurant = (restaurant) => {
-        RestaurantModel.updateRestaurant(restaurant).then((res) => {
-            console.log('updated restaurant', restaurant)
-            RestaurantModel.getAllRestaurants()
-            .then((result) => {
-                this.setState({restaurants: result})
-            })
-            .catch((err) => console.log(err))
-        })
-        .catch((err) => console.log(err))
-    }
+    // updateRestaurant = (restaurant) => {
+    //     RestaurantModel.updateRestaurant(restaurant).then((res) => {
+    //         console.log('updated restaurant', restaurant)
+    //         RestaurantModel.getAllRestaurants()
+    //         .then((result) => {
+    //             this.setState({restaurants: result})
+    //         })
+    //         .catch((err) => console.log(err))
+    //     })
+    //     .catch((err) => console.log(err))
+    // }
 
     // FILTER - if response 200 do this etc..
     deleteRestaurant = (restaurant) => {

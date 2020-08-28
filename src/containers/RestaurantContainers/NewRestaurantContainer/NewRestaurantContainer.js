@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import RestaurantModel from '../../../models/RestaurantModel';
+import setAuthHeader from '../../../utils/setAuthHeader';
 
 class NewRestaurantContainer extends Component {
     state = {
@@ -8,6 +9,8 @@ class NewRestaurantContainer extends Component {
         location: '',
         fullyVegan: false,
         image: '',
+        website: '',
+        error: '',
     };
 
     handleChange = (e) => {
@@ -21,14 +24,20 @@ class NewRestaurantContainer extends Component {
         e.preventDefault();
         RestaurantModel.createRestaurant(this.state)
             .then((result) => {
-                console.log(result);
+                console.log(result)
+                this.props.history.push('/restaurants');
+            })
+            .catch((err) => {
+            console.log(err)
+            // console.log(result)
+              this.setState({error: 'Something went wrong, please try again'});
             });
-        this.props.history.push('/restaurants');
-    }
+        }
 
     render(){
         return(
             <div>
+                <p> {this.state.error}</p>
                 <form onSubmit={this.handleSubmit}>
                     <h2>Add New Reccomendation</h2>
                     <div>
@@ -40,8 +49,12 @@ class NewRestaurantContainer extends Component {
                         <input type="text" name="location" onInput={this.handleChange}/>
                     </div>
                     <div>
-                        <label htmlFor="">Image</label>
+                        <label htmlFor="">Image Url</label>
                         <input type="text" name="image" onInput={this.handleChange}/>
+                    </div>
+                    <div>
+                        <label htmlFor="">Website</label>
+                        <input type="text" name="website" onInput={this.handleChange}/>
                     </div>
                     <div>
                         <label htmlFor="">Fully Vegan?</label>

@@ -7,6 +7,7 @@ class SignUp extends Component {
         username:'',
         email:'',
         password:'',
+        error: '',
     };
 
     handleChange = (e) => {
@@ -27,12 +28,14 @@ class SignUp extends Component {
                 console.log(err.response.status);
                 console.log(err.response.data);
                 console.log(err.response.data.message);
+                this.setState({error: err.response.data.message});
             });
         }
 
         render(){
             return(
                 <form onSubmit={this.handleSubmit}>
+                    {this.state.error}
                     <div>
                         <label htmlFor="username">Username</label>
                         <input onChange={this.handleChange} type="username" id="username" name="username" value={this.state.username} />

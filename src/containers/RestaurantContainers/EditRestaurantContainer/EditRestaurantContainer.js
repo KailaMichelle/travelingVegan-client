@@ -7,6 +7,7 @@ class EditRestaurantContainer extends Component {
         location: '',
         fullyVegan: false,
         image: '',
+        error: '',
     };
 
     componentDidMount(){
@@ -28,15 +29,22 @@ class EditRestaurantContainer extends Component {
             .then((result) => {
                 console.log(result);
                 this.setState({result})
+                this.props.history.push(`/restaurants/${this.props.match.params.id}`);
+            })
+            .catch((err) => {
+                console.log(err.response.status);
+                console.log(err.response.data);
+                console.log(err.response.data.message);
+                this.setState({error: err.response.data.message});
             });
-        this.props.history.push(`/restaurants/${this.props.match.params.id}`);
-    }
+        }
 
     render(){
         const { name, location, fullyVegan, image } = this.state;
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    {this.state.error}
                     <h2>Edit Reccomendation</h2>
                     <div>
                         <label htmlFor="">Name</label>
@@ -47,8 +55,12 @@ class EditRestaurantContainer extends Component {
                         <input type="text" name="location" onInput={this.handleChange}/>
                     </div>
                     <div>
-                        <label htmlFor="">Image</label>
+                        <label htmlFor="">Image Url</label>
                         <input type="text" name="image" onInput={this.handleChange}/>
+                    </div>
+                    <div>
+                        <label htmlFor="">Website</label>
+                        <input type="text" name="website" onInput={this.handleChange}/>
                     </div>
                     <div>
                         <label htmlFor="">Fully Vegan?</label>
