@@ -1,0 +1,43 @@
+.contact-container {
+    margin-bottom: 20vh;
+}
+
+.contact {
+    color: var(--darkgrey) !important;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.contact-p {
+    color: var(--darkgrey);
+    margin: 20px;
+}
+
+.contact-p2 {
+    color: var(--mustard);
+}
+
+
+.contact-form {
+    display: inline;
+}
+
+.form {
+    margin: 20px;
+}
+
+.hidden {
+    display: '';
+}
+
+.show {
+    display: block;
+    color: var(--darkgrey);
+    font-size: 2rem;
+}
+
+.send {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}

@@ -1,0 +1,46 @@
+.login-container {
+    min-height: 50vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    color: var(--mustard);
+    font-size: 2rem;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+input {
+    font-size: 1.6rem;
+    margin: 10px;
+}
+
+.login-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.labels {
+    margin-left:10px;
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.login2 {
+    color: var(--mustard);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}

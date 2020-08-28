@@ -1,0 +1,19 @@
+.container-about {
+    margin-bottom: 50px;
+    background: var(--mustard)
+}
+
+.about-content {
+    max-width: 60vw;
+}
+
+.p-about {
+    font-size: 1.6rem;
+    color: var(--offwhite) !important;
+}
+
+.about {
+    font-size: 3rem;
+    color: var(--darkgrey);
+    margin-bottom: 10px;
+}

@@ -1,0 +1,14 @@
+.profile {
+    color: var(--mustard);
+    font-size: 3rem;
+    margin-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+.profile-labels {
+    color: var(--darkgrey);
+    font-size: 2rem;
+    margin-left: 30px;
+    margin-bottom: 0;
+}

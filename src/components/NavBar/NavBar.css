@@ -1,0 +1,18 @@
+.logo {
+    font-family: var(--darker);
+    font-weight: 500;
+    color:var(--darkgrey);
+    text-decoration: none;
+    flex-grow: 1;
+    font-size: 1.5rem;
+}
+
+.navbar-items {
+    color: var(--darkgrey)!important;
+    font-size: 1.4rem !important;
+}
+
+.contact-nav {
+    text-decoration: none;
+    color: black;
+}
