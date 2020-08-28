@@ -2,8 +2,6 @@
 
 **Elevator Pitch:** Vegan blog that allows users to share and save their favorite vegan restaurants. Finding vegan food can sometimes be tough especially when traveling. This site will make sure you can always find something good to eat and get recommendations from the communities that knows best! 
 
-(Pinterest Meets Yelp)
-
 ---
 
 ## Sprint 1
@@ -97,3 +95,18 @@ To install fork and clone both repos and run npm i to install dependencies.
 ## Wireframe
 
 [link to Wireframe!](https://xd.adobe.com/view/f2720b67-1a09-4f80-9857-fb73202b8620-a721/)
+
+---
+
+## Shoutouts
+
+Ally Pittman
+Zach Milan
+Nathan Harris
+Michael Petty 
+Melisa Larson
+Leah Davis
+
+Honestly the list goes on..Thank you to the GA SEI-12 cohort. 
+Thank you for all of the emotional and technical support!
+I will miss seeing you all everyday and look forward to further collaborations. 

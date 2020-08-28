@@ -36,7 +36,7 @@ class EditRestaurantContainer extends Component {
             .catch((err) => {
                 console.log(err)
                 // console.log(result)
-                  this.setState({error: 'Something went wrong, please try again'});
+                  this.setState({error: `You can't edit someone else's post. Please login`});
                 });
             }
 

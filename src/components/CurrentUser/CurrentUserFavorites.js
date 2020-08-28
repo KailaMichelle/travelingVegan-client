@@ -5,7 +5,6 @@ import DefaultImage from '../../images/vegan.jpg'
 
 function CurrentUserFavorites(props){
     const { favoriteList } = props;
-    // console.log(props.favoriteList.name)
 
     return (
         <div className="container">

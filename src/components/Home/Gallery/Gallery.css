@@ -1,10 +1,3 @@
-
-/* .gallery-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -57,4 +50,5 @@ ul {
   }
 
 
+  /* Shoutout to this article for help on the gallery! */
   /* https://css-tricks.com/adaptive-photo-layout-with-flexbox/ */

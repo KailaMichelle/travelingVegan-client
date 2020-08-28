@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import UserModel from '../../models/UserModel';
-import { Container } from '@material-ui/core';
+import { Container, Button } from '@material-ui/core';
 
 import './Restaurant.css'
 import DefaultImage from '../../images/vegan.jpg'
@@ -46,7 +46,7 @@ class Restaurant extends Component{
     }
 
     render(){
-       const { restaurant, list, currentUser } = this.props
+       const { restaurant, list, currentUser, error } = this.props
         return (
             <div className="container">
             <Container fixed>
@@ -61,11 +61,18 @@ class Restaurant extends Component{
                 <div className="buttons">
                 <h3 className="highlight">{this.state.message}</h3>
                 </div>
-                <div className="buttons"> 
+                <div className={currentUser ? 'buttons' : 'hidden'}> 
                     <button className="button2" value={restaurant._id} onClick={this.likeClicked} >Add to Favorites</button>
                     <button className="button2" value={restaurant._id} onClick={this.dislikeClicked} >Remove from Favorites</button>
                     <button className="button2" onClick={this.deleteClicked} value={restaurant._id} currentUser={currentUser}>Delete</button>
-                    <button className="button2" component={Link} to={`/restaurants/${restaurant._id}/edit`} >Edit</button>
+                    <Link to={`/restaurants/${restaurant._id}/edit`}><button className="button2" >Edit</button></Link>
+                </div>
+                <h3 className="highlight">{error}</h3>
+                {!list && (
+                    <h3 className="highlight">{restaurant.description}</h3>
+                )}
+                <div>
+
                 </div>
             </div>
             </Container>
