@@ -25,6 +25,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 // ADDITIONAL NAVBAR CSS
 import './NavBar.css';
 
+import logo from '../../images/logo.png';
+
 // MATERIAL UI STYLES
 const useStyles = makeStyles((theme) => ({
     root: {

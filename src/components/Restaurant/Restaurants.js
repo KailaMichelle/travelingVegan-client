@@ -11,7 +11,8 @@ function Restaurants(props){
         restaurant={restaurantObj} 
         list={true} 
         currentUser={props.currentUser} 
-        deleteRestaurant={props.deleteRestaurant}/>
+        deleteRestaurant={props.deleteRestaurant}
+        error={props.error}/>
     });
 
     return (

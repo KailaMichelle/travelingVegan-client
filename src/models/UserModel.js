@@ -36,13 +36,6 @@ class UserModel {
         })
             .then((response) => response.json())
     }
-
-    // static findList = (restaurant, id) => {
-    //     return fetch(`${url}/${id}/list`, {
-    //         body: JSON.stringify(restaurant)
-    //     })
-    //         .then((response) => response.json())
-    // }
 }
 
 export default UserModel;

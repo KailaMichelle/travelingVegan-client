@@ -31,7 +31,6 @@ class NewRestaurantContainer extends Component {
             })
             .catch((err) => {
             console.log(err)
-            // console.log(result)
               this.setState({error: 'Something went wrong, please try again'});
             });
         }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // MATERIAL UI IMPORTS 
 import { makeStyles } from '@material-ui/core/styles';
-import { BottomNavigation, Button, Input, Container, IconButton, TextField, Paper, Breadcrumbs, Grid } from '@material-ui/core'; 
+import { IconButton, Grid } from '@material-ui/core'; 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
