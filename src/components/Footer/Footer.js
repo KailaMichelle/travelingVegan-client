@@ -13,6 +13,15 @@ const useStyles = makeStyles({
       width: 500,
       alignItems: 'center',
     },
+    footer: {
+        background: 'var(--mustard)',
+        height: '20vh',
+    },
+    icon: {
+        color: 'var(--offwhite)',
+        fontSize: '2rem',
+        margin: '20px',
+    }
   });
 
 function Footer(){
@@ -20,22 +29,24 @@ function Footer(){
     const [value, setValue] = React.useState(0);
     
     return( 
-        <Grid container justify="center">
-            <Grid container justify="center" value={value} onChange={(event, newValue) => {setValue(newValue)}} showLabels className={classes.root}>
-                <Link to="/">
-                    <IconButton><FacebookIcon /></IconButton>
-                </Link>
-                <Link to="/">
-                    <IconButton><InstagramIcon /></IconButton>
-                </Link>
-                <Link to="/">
-                    <IconButton><GitHubIcon /></IconButton>
-                </Link>
-                <Link to="/">
-                    <IconButton><LinkedInIcon /></IconButton>
-                </Link>
+        // <div className="footer">
+            <Grid container justify="center" className={classes.footer}>
+                <Grid container justify="center" value={value} onChange={(event, newValue) => {setValue(newValue)}} showLabels className={classes.root}>
+                    <Link to="/">
+                        <IconButton><FacebookIcon className={classes.icon}/></IconButton>
+                    </Link>
+                    <Link to="/">
+                        <IconButton><InstagramIcon className={classes.icon}/></IconButton>
+                    </Link>
+                    <a href="https://github.com/KailaMichelle">
+                        <IconButton><GitHubIcon className={classes.icon}/></IconButton>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kailahobbs/">
+                        <IconButton ><LinkedInIcon className={classes.icon}/></IconButton>
+                    </a>
+                </Grid>
             </Grid>
-        </Grid>
+        // </div>
     )
 }
 

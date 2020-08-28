@@ -32,12 +32,11 @@ class EditRestaurantContainer extends Component {
                 this.props.history.push(`/restaurants/${this.props.match.params.id}`);
             })
             .catch((err) => {
-                console.log(err.response.status);
-                console.log(err.response.data);
-                console.log(err.response.data.message);
-                this.setState({error: err.response.data.message});
-            });
-        }
+                console.log(err)
+                // console.log(result)
+                  this.setState({error: 'Something went wrong, please try again'});
+                });
+            }
 
     render(){
         const { name, location, fullyVegan, image } = this.state;

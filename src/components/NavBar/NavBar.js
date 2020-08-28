@@ -10,9 +10,7 @@ import { faUserPlus, faSignInAlt, faSignOutAlt, faUserCircle } from '@fortawesom
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { 
-    AppBar, 
     Toolbar, 
-    Button, 
     IconButton, 
     Drawer, 
     List, 
@@ -78,11 +76,11 @@ function NavBar({ currentUser, logout }) {
         onKeyDown={toggleDrawer(anchor, false)}
     >
     <List>
-        <ListItem button component={NavLink} to="/about" color="inherit">
+        <ListItem button component={NavLink} to="/" color="inherit">
             <ListItemText>About</ListItemText>
         </ListItem>
-        <ListItem button component={NavLink} to="/contact" color="inherit">
-            <ListItemText>Contact</ListItemText>
+        <ListItem button>
+            <ListItemText><a href="mailto:kaila22@hotmail.com" className="contact-nav">Contact</a></ListItemText>
         </ListItem>
         <ListItem button component={NavLink} to="/restaurants" color="inherit">
             <ListItemText>Restaurants</ListItemText>
@@ -90,7 +88,13 @@ function NavBar({ currentUser, logout }) {
     </List>
     <Divider />
         <List>
-            <ListItem button component={NavLink} to={link} color="inherit">
+            <ListItem button component={NavLink} to="/restaurants/new" color="inherit">
+                <ListItemText>Add Reccomendation</ListItemText>
+            </ListItem>
+        </List>
+            <Divider />
+        <List>    
+            <ListItem button component={NavLink} to={`profiles/${currentUser}`} color="inherit">
                 <ListItemIcon><FontAwesomeIcon icon={['fas', 'user-circle']} /></ListItemIcon>
                 <ListItemText>Profile</ListItemText>
             </ListItem>
@@ -113,11 +117,11 @@ function NavBar({ currentUser, logout }) {
         onKeyDown={toggleDrawer(anchor, false)}
         >
         <List>
-            <ListItem button component={NavLink} to="/about" color="inherit">
+            <ListItem button component={NavLink} to="/" color="inherit">
                 <ListItemText>About</ListItemText>
             </ListItem>
-            <ListItem button component={NavLink} to="/contact" color="inherit">
-                <ListItemText>Contact</ListItemText>
+            <ListItem button>
+                <ListItemText><a href="mailto:kaila22@hotmail.com" className="contact">Contact</a></ListItemText>
             </ListItem>
             <ListItem button component={NavLink} to="/restaurants" color="inherit">
                 <ListItemText>Restaurants</ListItemText>

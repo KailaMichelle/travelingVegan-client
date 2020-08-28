@@ -9,6 +9,7 @@ import NewRestaurantContainer from '../containers/RestaurantContainers/NewRestau
 import RestaurantContainer from '../containers/RestaurantContainers/RestaurantContainer/RestaurantContainer';
 import EditRestaurantContainer from '../containers/RestaurantContainers/EditRestaurantContainer/EditRestaurantContainer';
 import HomeContainer from '../containers/HomeContainer/HomeContainer';
+import FourOFour from '../components/FourOFour';
 
 export default ({ currentUser, setCurrentUser }) => (
     <Switch>
@@ -23,11 +24,14 @@ export default ({ currentUser, setCurrentUser }) => (
 
         {/* USER ROUTES */}
         <Route path='/profiles/:id' component={CurrentUserContainer} />
-        <Route path='/profiles' component={UserContainer} />
+        {/* <Route path='/profiles' component={UserContainer} /> */}
 
         {/* AUTH */}
         <Route path='/login' render={() => <Login setCurrentUser={setCurrentUser}/> } />
         <Route path='/signup' render={() => <Signup setCurrentUser={setCurrentUser}/> } />
+
+        {/* 404 */}
+        <Route path='*' component={FourOFour} />
 
     </Switch>
 )

@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import UserModel from '../../models/UserModel';
-import RestaurantShow from './RestaurantShow';
-import Button from '@material-ui/core/Button'
 
 import './Restaurant.css'
+import DefaultImage from '../../images/vegan.jpg'
 
 class Restaurant extends Component{
     state = {
         favoriteRestaurants: [],
-        // list: false,
     };
 
     // componentDidMount(){
@@ -51,7 +49,6 @@ class Restaurant extends Component{
         });
     }
 
-
     dislikeClicked = (e) => {
         console.log(this.state)
         console.log('dislike clicked')
@@ -69,25 +66,25 @@ class Restaurant extends Component{
     render(){
        const { restaurant, list, currentUser } = this.props
         return (
-            <div>
                 <div>
-                    {!list && (
-                    <>
-                    <button value={restaurant._id} onClick={this.likeClicked} >Like</button>
-                    <button value={restaurant._id} onClick={this.dislikeClicked} >DisLike</button>
-                    </>
-                    )}
-                    <button onClick={this.deleteClicked}  value={restaurant._id}>Delete</button>
+                            {!list && (
+                                <div>
+                                    {restaurant.name}{restaurant.location}
+                                    <Link to={`/restaurants/${restaurant._id}/edit`}>Edit</Link>
+                                </div>
+                            )}
+                    <ul>
+                        <li>
+                            <Link to={`/restaurants/${restaurant._id}`} onClick={this.checkList} restaurant={restaurant._id} value={restaurant._id} currentUser={currentUser}>
+                            <img src={restaurant.image ? restaurant.image : DefaultImage} alt={restaurant.name}/></Link>
+                            <div>
+                                <button value={restaurant._id} onClick={this.likeClicked} className={currentUser ? 'show': 'hidden'}>Like</button>
+                                <button value={restaurant._id} onClick={this.dislikeClicked} className={currentUser ? 'show': 'hidden'}>DisLike</button>
+                                <button onClick={this.deleteClicked} value={restaurant._id}>Delete</button>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div>
-                <Link to={`/restaurants/${restaurant._id}`} onClick={this.checkList} restaurant={restaurant._id} value={restaurant._id} currentUser={currentUser}>
-                    {restaurant.name}
-                </Link>
-                    {restaurant.location}
-                    <img src={restaurant.image} alt=""/>
-                <Link to={`/restaurants/${restaurant._id}/edit`}>Edit</Link>
-                </div>
-            </div>
         )
     }
 }

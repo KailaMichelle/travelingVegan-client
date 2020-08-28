@@ -1,5 +1,6 @@
 import React from 'react';
 import Restaurant from './Restaurant';
+import { Container } from '@material-ui/core';
 
 function Restaurants(props){
 
@@ -13,8 +14,16 @@ function Restaurants(props){
     });
 
     return (
-        <div>
-            {restaurantList}
+        <div className="container">
+            <Container fixed>
+                <div>
+                    <h2>Los Angeles</h2>
+                    <h4>Check out our favorite spots!</h4>
+                </div>
+                <div>
+                    {restaurantList}
+                </div>
+            </Container>
         </div>
     )
 }
