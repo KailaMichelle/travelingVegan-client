@@ -1,4 +1,5 @@
-const url = process.env.REACT_APP_API
+// const url = `http://localhost:4000/restaurants`
+const url = `${process.env.REACT_APP_API}/restaurants`
 
 class RestaurantModel {
     static getAllRestaurants = () => {

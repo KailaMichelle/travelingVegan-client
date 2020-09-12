@@ -1,5 +1,5 @@
 // const url = `http://localhost:4000/profiles`
-const url = process.env.REACT_APP_API
+const url = `${process.env.REACT_APP_API}/profiles`
 
 class UserModel {
     static getAllUsers = () => {
