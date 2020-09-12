@@ -1,8 +1,9 @@
-const url = `http://localhost:4000/profiles`
+// const url = `http://localhost:4000/profiles`
+const url = process.env.REACT_APP_API
 
 class UserModel {
     static getAllUsers = () => {
-        return fetch('http://localhost:4000/profiles')
+        return fetch(`${url}/profiles`)
             .then((response) => response.json())
     }
 
